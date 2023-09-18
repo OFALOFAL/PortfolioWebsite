@@ -503,7 +503,6 @@ function setupWebGL (evt) {
     const buffers = initBuffers(gl);
 
     let then = 0;
-
     function drawScene() {
         // Tell WebGL how to convert from clip space to pixels
         gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);

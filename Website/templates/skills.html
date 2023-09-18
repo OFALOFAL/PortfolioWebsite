@@ -14,23 +14,26 @@
     About Me
 </header>
 
-<div id="mySidebar" class="sidebar">
-  <a href="javascript:void(0)" id="closebtn" onclick="closeNav()">x</a>
+<div id="sidebar" class="sidebar">
+  <a href="javascript:void(0)" id="closebtn" onclick="closeSidebar()">x</a>
   <a href="{% url 'Home' %}">Home</a>
   <a href="{% url 'About' %}">About</a>
   <a href="{% url 'Projects' %}">Projects</a>
   <a href="{% url 'Contact' %}">Contact</a>
 </div>
-<button id="openbtn" onclick="openNav()">☰</button>
+<button id="openbtn" onclick="openSidebar()">☰</button>
 <script>
-    function openNav() {
-      document.getElementById("mySidebar").style.width = "150px";
-      document.getElementById("openbtn").style.padding = '0';
+    document.getElementById("openbtn").addEventListener("mouseenter", function(  ) {
+        openSidebar();
+    });
+    function openSidebar() {
+        document.getElementById("sidebar").style.width = "150px";
+        document.getElementById("openbtn").style.padding = '0';
     }
 
-    function closeNav() {
-      document.getElementById("mySidebar").style.width = "0";
-      document.getElementById("openbtn").style.padding = '10px 15px';
+    function closeSidebar() {
+        document.getElementById("sidebar").style.width = "0";
+        document.getElementById("openbtn").style.padding = '10px 15px';
     }
 </script>
 </body>

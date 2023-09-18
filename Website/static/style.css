@@ -7,7 +7,7 @@ html, body {
 
 .topnav {
     overflow: hidden;
-    background-color: #AC8FB3;
+    background-color: rgb(197, 180, 227);
     color: #DDD;
     padding: 14px;
     text-align: center;
@@ -31,11 +31,25 @@ html, body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgba(197, 180, 227, 255);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
     text-align: center;
+    background: linear-gradient(45deg, #C5B4E3FF, #a897d5, #C5B4E3FF, #a897d5);
+    background-size: 400% 400%;
+	animation: gradient 5s linear infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0 50%;
+	}
 }
 
 .sidebar a {
@@ -69,19 +83,81 @@ html, body {
     top: 0;
     font-size: 20px;
     cursor: pointer;
-    background-color: #111;
+    background-color: rgb(197, 180, 227);
     color: white;
     padding: 10px 15px;
     border: none;
-    position: absolute;
-    transition: 0.5s;
-}
-
-#openbtn:hover {
-  background-color: #444;
+    transition: 1s;
 }
 
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 20px;}
   .sidebar a {font-size: 18px;}
+}
+
+.submit-btn {
+    background-color: rgb(255, 245, 227);
+    border: 2px solid #AC8FB3;
+    border-radius: 30px;
+    box-shadow: #AC8FB3 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    padding: 0 18px;
+    margin-bottom: 4px;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #fff;
+}
+
+.submit-btn:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .submit-btn {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+.fa {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 4px;
+    width: 56px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.fa:hover {
+    opacity: 0.84;
+}
+
+.fa-linkedin{
+    background: #0A66C2;
+    color: white;
+}
+
+.fa-github{
+    background: #505050;
+    color: white;
+}
+
+.fa-facebook{
+    background: #3A559F;
+    color: white;
 }

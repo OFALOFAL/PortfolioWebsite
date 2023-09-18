@@ -7,30 +7,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Source+Code+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+    >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body style="background: rgb(153, 224, 217)">
 
 <header class="topnav">
-    About Me
+    <h3>
+        Contact
+    </h3>
 </header>
 
-<div id="mySidebar" class="sidebar">
-  <a href="javascript:void(0)" id="closebtn" onclick="closeNav()">x</a>
+<div class="container" class="centerDiv">
+    <h1 style="
+        font-family: 'Source Code Pro';
+        margin-top: 1ch;
+        margin-bottom: 2ch;
+    ">
+        Let's get in
+        <span style="font-family: 'Kaushan Script', cursive; color: rgba(188, 75, 81, 255);">touch!</span>
+    </h1>
+    <div style="clear: both">
+        <form action="mailto:olaflewan@gmail.com" method="post" enctype="text/plain">
+            <div class="row">
+                <div class="col">
+                    Name:<br>
+                    <input
+                            style="
+                                border: 0;
+                                border-radius: 6px;
+                                background-color: rgb(255, 245, 227);
+                                padding-left: 1ch;
+                                height: 3ch;
+                                width: 50%;
+                                min-width: 150px;
+                            "
+                            type="text"
+                            name="name"
+                            placeholder="Enter name"
+                    ><br>
+                </div>
+                <div class="col">
+                    E-mail:<br>
+                    <input
+                            style="
+                                border: 0;
+                                border-radius: 6px;
+                                background-color: rgb(255, 245, 227);
+                                padding-left: 1ch;
+                                height: 3ch;
+                                width: 50%;
+                                min-width: 150px;
+                            "
+                            type="text"
+                            name="mail"
+                            placeholder="Enter mail"
+                    ><br>
+                </div>
+            </div>
+            <div style="clear: both; padding-top: 1ch;">
+                Message:<br>
+                <textarea
+                        id="message"
+                        style="
+                            border: 0;
+                            border-radius: 6px;
+                            background-color: rgb(255, 245, 227);
+                            resize: none;
+                            max-height: 200px;
+                            min-height: 40px;
+                            height: 200px;
+                            font-size: 15px;
+                            width: 100%;
+                            outline: none;
+                            padding-left: 1ch;
+                            padding-top: 1ch;
+                        "
+                        type="textarea"
+                        name="textarea"
+                        placeholder="Enter text"
+                ></textarea>
+                <br><br>
+                <div>
+                    <button style="float: left" type="submit" value="Send" class="submit-btn" role="button">Submit</button>
+                    <div style="float: right">
+                        <a href="#" class="fa fa-facebook" style="font-size: 36px"></a>
+                        <a href="#" class="fa fa-github" style="font-size: 36px"></a>
+                        <a href="#" class="fa fa-linkedin" style="font-size: 36px"></a>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="sidebar" class="sidebar">
+  <a href="javascript:void(0)" id="closebtn" onclick="closeSidebar()">x</a>
   <a href="{% url 'Home' %}">Home</a>
   <a href="{% url 'About' %}">About</a>
   <a href="{% url 'Projects' %}">Projects</a>
   <a href="{% url 'Skills' %}">Skills</a>
 </div>
-<button id="openbtn" onclick="openNav()">☰</button>
+<button id="openbtn" onclick="openSidebar()">☰</button>
 <script>
-    function openNav() {
-      document.getElementById("mySidebar").style.width = "150px";
-      document.getElementById("openbtn").style.padding = '0';
+    document.getElementById("openbtn").addEventListener("mouseenter", function(  ) {
+        openSidebar();
+    });
+    function openSidebar() {
+        document.getElementById("sidebar").style.width = "150px";
+        document.getElementById("openbtn").style.padding = '0';
     }
 
-    function closeNav() {
-      document.getElementById("mySidebar").style.width = "0";
-      document.getElementById("openbtn").style.padding = '10px 15px';
+    function closeSidebar() {
+        document.getElementById("sidebar").style.width = "0";
+        document.getElementById("openbtn").style.padding = '10px 15px';
     }
 </script>
 </body>
