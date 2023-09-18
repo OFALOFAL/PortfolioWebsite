@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <title>Olaf Lewandowski</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+</head>
+<body>
+
+<header class="topnav">
+    About Me
+</header>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" id="closebtn" onclick="closeNav()">x</a>
+  <a href="{% url 'Home' %}">Home</a>
+  <a href="{% url 'About' %}">About</a>
+  <a href="{% url 'Skills' %}">Skills</a>
+  <a href="{% url 'Contact' %}">Contact</a>
+</div>
+<button id="openbtn" onclick="openNav()">☰</button>
+<script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "150px";
+      document.getElementById("openbtn").style.padding = '0';
+    }
+
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("openbtn").style.padding = '10px 15px';
+    }
+</script>
+</body>
+</html>

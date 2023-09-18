@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <title>Olaf Lewandowski</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <script src="{% static 'js/gl-matrix.js' %}" type="module" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<a href="{% url 'Home' %}"><div class="centerDiv", style="color:#DDD; text-shadow: 1px 1px rgba(197, 180, 227, 125);">
+    <h2 style="text-align: center;">Olaf Lewandowski</h2>
+    <h2 style="text-align: center;">Portfolio</h2>
+</div></a>
+<div id="sidebar" class="sidebar">
+  <a href="javascript:void(0)" id="closebtn" onclick="closeSidebar()">x</a>
+  <a href="{% url 'About' %}">About</a>
+  <a href="{% url 'Projects' %}">Projects</a>
+  <a href="{% url 'Skills' %}">Skills</a>
+  <a href="{% url 'Contact' %}">Contact</a>
+</div>
+<button id="openbtn" onclick="openSidebar()">☰</button>
+
+<canvas>Your browser does not seem to support HTML5 canvas.</canvas>
+<script src="{% static 'js/HomePage.js' %}" type="module" defer></script>
+<script>
+    document.getElementById("openbtn").addEventListener("mouseenter", function(  ) {
+        openSidebar();
+    });
+    function openSidebar() {
+        document.getElementById("sidebar").style.width = "150px";
+        document.getElementById("openbtn").style.padding = '0';
+    }
+
+    function closeSidebar() {
+        document.getElementById("sidebar").style.width = "0";
+        document.getElementById("openbtn").style.padding = '10px 15px';
+    }
+</script>
+</body>
+</html>
