@@ -13,17 +13,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
-<a href="{% url 'Home' %}"><div class="centerDiv", style="color:#DDD; text-shadow: 1px 1px rgba(197, 180, 227, 125);">
+<body style="overflow: hidden !important;">
+<a href="{% url 'Home' %}"><div class="centerDiv", style="color:#DDD; text-shadow: 1px 1px rgb(130,118,199);">
     <h2 style="text-align: center;">Olaf Lewandowski</h2>
     <h2 style="text-align: center;">Portfolio</h2>
 </div></a>
 <div id="sidebar" class="sidebar">
-  <a href="javascript:void(0)" id="closebtn" onclick="closeSidebar()">x</a>
-  <a href="{% url 'About' %}">About</a>
-  <a href="{% url 'Projects' %}">Projects</a>
-  <a href="{% url 'Skills' %}">Skills</a>
-  <a href="{% url 'Contact' %}">Contact</a>
+    <a href="javascript:void(0)" id="closebtn" onclick="closeSidebar()">x</a>
+    <a href="{% url 'Home' %}">Home</a>
+    <a href="{% url 'About' %}">About</a>
+    <a href="{% url 'Skills' %}">Skills</a>
+    <a href="{% url 'Projects' %}">Projects</a>
+    <a href="{% url 'Contact' %}">Contact</a>
 </div>
 <button id="openbtn" onclick="openSidebar()">☰</button>
 

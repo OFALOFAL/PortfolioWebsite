@@ -9,7 +9,10 @@ const colors = {
     'Cornsilk': [255, 245, 227, 255],
     'Cerulean': [28, 110, 140, 255],
     'Bittersweat shimmer': [188, 75, 81, 255],
-    'Cool gray': [197, 180, 227, 255]
+    'Cool gray': [208, 196, 227, 255],
+    'Dark Pastel Green': [144, 184, 144, 255],
+    'Light Brown': [202, 173, 126, 255],
+    'Dark Brown': [80, 68, 45, 255],
 }
 
 const terrain_color = []

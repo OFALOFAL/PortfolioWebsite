@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <title>Olaf Lewandowski</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<html>
+<body style="background: rgb(153, 224, 217)">
+    <div class="centerDiv">
+        <h1>Pass in your favourite song!</h1>
+        <form action="/Projects/SMMR/results" method="post">
+        {% csrf_token %}
+        <p style="margin-bottom: 1ch">Song:</p>
+        <input class="SMMR_inputs" name="songName">
+        <br><br>
+            <p style="margin-bottom: 1ch">Artist:</p>
+        <input class="SMMR_inputs" name="artistName">
+        <br><br>
+        <div class="d-flex" align="center">
+            <a href="{% url 'SMMR_results' %}"><button class="submit-btn">Submit</button></a>
+        </div>
+        </form>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" id="closebtn" onclick="closeSidebar()">x</a>
+        <a href="{% url 'Home' %}">Home</a>
+        <a href="{% url 'About' %}">About</a>
+        <a href="{% url 'Skills' %}">Skills</a>
+        <a href="{% url 'Projects' %}">Projects</a>
+        <a href="{% url 'Contact' %}">Contact</a>
+    </div>
+    <button id="openbtn" onclick="openSidebar()">☰</button>
+    <script>
+        document.getElementById("openbtn").addEventListener("mouseenter", function(  ) {
+            openSidebar();
+        });
+        function openSidebar() {
+            document.getElementById("sidebar").style.width = "150px";
+            document.getElementById("openbtn").style.padding = '0';
+        }
+
+        function closeSidebar() {
+            document.getElementById("sidebar").style.width = "0";
+            document.getElementById("openbtn").style.padding = '10px 15px';
+        }
+    </script>
+</body>
+</html>

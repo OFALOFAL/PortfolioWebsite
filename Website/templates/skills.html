@@ -7,34 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Source+Code+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+    >
 </head>
-<body>
+<body id="body" style="background: rgb(153, 224, 217)">
 
-<header class="topnav">
-    About Me
-</header>
+<div id="skills-content"></div>
 
 <div id="sidebar" class="sidebar">
-  <a href="javascript:void(0)" id="closebtn" onclick="closeSidebar()">x</a>
-  <a href="{% url 'Home' %}">Home</a>
-  <a href="{% url 'About' %}">About</a>
-  <a href="{% url 'Projects' %}">Projects</a>
-  <a href="{% url 'Contact' %}">Contact</a>
+    <a href="javascript:void(0)" id="closebtn">x</a>
+    <a href="{% url 'Home' %}">Home</a>
+    <a href="{% url 'About' %}">About</a>
+    <a href="{% url 'Skills' %}">Skills</a>
+    <a href="{% url 'Projects' %}">Projects</a>
+    <a href="{% url 'Contact' %}">Contact</a>
 </div>
-<button id="openbtn" onclick="openSidebar()">☰</button>
-<script>
-    document.getElementById("openbtn").addEventListener("mouseenter", function(  ) {
-        openSidebar();
-    });
-    function openSidebar() {
-        document.getElementById("sidebar").style.width = "150px";
-        document.getElementById("openbtn").style.padding = '0';
-    }
-
-    function closeSidebar() {
-        document.getElementById("sidebar").style.width = "0";
-        document.getElementById("openbtn").style.padding = '10px 15px';
-    }
-</script>
+<button id="openbtn">☰</button>
+<script src="{% static 'js/skills.js' %}" type="module" defer></script>
+<script id="skillsImgPath" type="text">{% static 'skillsImg' %}</script>
 </body>
 </html>

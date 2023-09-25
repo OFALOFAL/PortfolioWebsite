@@ -17,20 +17,14 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
     >
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/4d0aff5fd5.js" crossorigin="anonymous"></script>
 </head>
 <body style="background: rgb(153, 224, 217)">
 
-<header class="topnav">
-    <h3>
-        Contact
-    </h3>
-</header>
 
-<div class="container" class="centerDiv">
+<div class="centerDiv" id="contactDiv">
     <h1 style="
         font-family: 'Source Code Pro';
-        margin-top: 1ch;
         margin-bottom: 2ch;
     ">
         Let's get in
@@ -40,34 +34,18 @@
         <form action="mailto:olaflewan@gmail.com" method="post" enctype="text/plain">
             <div class="row">
                 <div class="col">
-                    Name:<br>
+                    <p style="margin-bottom: 1ch">Name:</p>
                     <input
-                            style="
-                                border: 0;
-                                border-radius: 6px;
-                                background-color: rgb(255, 245, 227);
-                                padding-left: 1ch;
-                                height: 3ch;
-                                width: 50%;
-                                min-width: 150px;
-                            "
+                            id="contact-name"
                             type="text"
                             name="name"
                             placeholder="Enter name"
                     ><br>
                 </div>
                 <div class="col">
-                    E-mail:<br>
+                    <p style="margin-bottom: 1ch">E-mail:</p>
                     <input
-                            style="
-                                border: 0;
-                                border-radius: 6px;
-                                background-color: rgb(255, 245, 227);
-                                padding-left: 1ch;
-                                height: 3ch;
-                                width: 50%;
-                                min-width: 150px;
-                            "
+                            id="contact-mail"
                             type="text"
                             name="mail"
                             placeholder="Enter mail"
@@ -75,23 +53,9 @@
                 </div>
             </div>
             <div style="clear: both; padding-top: 1ch;">
-                Message:<br>
+                <p style="margin-bottom: 1ch">Message:</p>
                 <textarea
                         id="message"
-                        style="
-                            border: 0;
-                            border-radius: 6px;
-                            background-color: rgb(255, 245, 227);
-                            resize: none;
-                            max-height: 200px;
-                            min-height: 40px;
-                            height: 200px;
-                            font-size: 15px;
-                            width: 100%;
-                            outline: none;
-                            padding-left: 1ch;
-                            padding-top: 1ch;
-                        "
                         type="textarea"
                         name="textarea"
                         placeholder="Enter text"
@@ -99,10 +63,10 @@
                 <br><br>
                 <div>
                     <button style="float: left" type="submit" value="Send" class="submit-btn" role="button">Submit</button>
-                    <div style="float: right">
-                        <a href="#" class="fa fa-facebook" style="font-size: 36px"></a>
-                        <a href="#" class="fa fa-github" style="font-size: 36px"></a>
-                        <a href="#" class="fa fa-linkedin" style="font-size: 36px"></a>
+                    <div class="contact-links" style="float: right">
+                        <a href="https://github.com/OFALOFAL/" target=”_blank” class="fa fa-github fa-bounce fa-contact"></a>
+                        <a href="https://www.linkedin.com/in/o-f-a-l-b18241229/" target=”_blank” class="fa fa-linkedin fa-bounce fa-contact"></a>
+                        <a href="https://www.facebook.com/olaf.lewandowski2" target=”_blank” class="fa fa-facebook fa-bounce fa-contact"></a>
                     </div>
                 </div>
 
@@ -112,11 +76,12 @@
 </div>
 
 <div id="sidebar" class="sidebar">
-  <a href="javascript:void(0)" id="closebtn" onclick="closeSidebar()">x</a>
-  <a href="{% url 'Home' %}">Home</a>
-  <a href="{% url 'About' %}">About</a>
-  <a href="{% url 'Projects' %}">Projects</a>
-  <a href="{% url 'Skills' %}">Skills</a>
+    <a href="javascript:void(0)" id="closebtn" onclick="closeSidebar()">x</a>
+    <a href="{% url 'Home' %}">Home</a>
+    <a href="{% url 'About' %}">About</a>
+    <a href="{% url 'Skills' %}">Skills</a>
+    <a href="{% url 'Projects' %}">Projects</a>
+    <a href="{% url 'Contact' %}">Contact</a>
 </div>
 <button id="openbtn" onclick="openSidebar()">☰</button>
 <script>
