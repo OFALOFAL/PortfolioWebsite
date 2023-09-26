@@ -100,7 +100,8 @@ def predict_song_mood(token, spotifySearch):
 
     sample_dataset = tf.data.Dataset.zip((audio_data, fillout)).batch(32).prefetch(tf.data.AUTOTUNE)
 
-    model = tf.keras.models.load_model(os.path.join(os.path.join(BASE_DIR, 'Website/static/'), "model"))
+    print(os.path.join(os.path.join(BASE_DIR, 'Website/static/'), "model"))
+    model = tf.keras.models.load_model(os.path.join(os.path.join(BASE_DIR, 'Website/static/'), "model"), compile=False)
 
     model_sample_pred_prob = model.predict(sample_dataset)
     model_sample_pred = np.argmax(model_sample_pred_prob, axis=1)
