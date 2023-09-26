@@ -1,7 +1,6 @@
 from django.shortcuts import redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template.loader import render_to_string
-from dotenv import load_dotenv
 from .predict_song_mood import *
 import os
 
@@ -46,9 +45,8 @@ def SMMR_results(request):
 
     spotify_search = song_name + ' ' + artist_name
 
-    load_dotenv()
-    client_id = os.getenv('CLIENT_ID')
-    client_secret = os.getenv('CLIENT_SECRET')
+    client_id = os.environ.get('CLIENT_ID')
+    client_secret = os.environ.get('CLIENT_SECRET')
 
     song_mood = predict_song_mood(get_token(client_id, client_secret), spotify_search)
 
