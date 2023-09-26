@@ -5,7 +5,10 @@ import pandas as pd
 import numpy as np
 import tensorflow as tf
 import os
-from django.conf import settings
+from pathlib import Path
+import os
+
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 def get_token(client_id, client_secret):
@@ -97,7 +100,7 @@ def predict_song_mood(token, spotifySearch):
 
     sample_dataset = tf.data.Dataset.zip((audio_data, fillout)).batch(32).prefetch(tf.data.AUTOTUNE)
 
-    model = tf.keras.models.load_model(os.path.join(settings.STATICFILES_DIRS[0], "model"))
+    model = tf.keras.models.load_model(os.path.join(os.path.join(BASE_DIR, 'Website/static/'), "model"))
 
     model_sample_pred_prob = model.predict(sample_dataset)
     model_sample_pred = np.argmax(model_sample_pred_prob, axis=1)
