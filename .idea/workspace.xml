@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10a78c7d-f5f0-49b1-8455-941430797bb9" name="Changes" comment="req update 6">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vercel.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,6 +255,7 @@
       <workItem from="1695667084133" duration="8188000" />
       <workItem from="1695705450064" duration="3427000" />
       <workItem from="1695744418932" duration="2485000" />
+      <workItem from="1695749781843" duration="365000" />
     </task>
     <task id="LOCAL-00001" summary="deleted venv">
       <option name="closed" value="true" />
@@ -282,7 +281,23 @@
       <option name="project" value="LOCAL" />
       <updated>1695746917776</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="req update 6">
+      <option name="closed" value="true" />
+      <created>1695750037502</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695750037502</updated>
+    </task>
+    <task id="LOCAL-00005" summary="req update 6">
+      <option name="closed" value="true" />
+      <created>1695750042194</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695750042194</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
