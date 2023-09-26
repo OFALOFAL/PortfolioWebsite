@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10a78c7d-f5f0-49b1-8455-941430797bb9" name="Changes" comment="req update 6">
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-    </list>
+    <list default="true" id="10a78c7d-f5f0-49b1-8455-941430797bb9" name="Changes" comment="req update 8" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -255,7 +253,7 @@
       <workItem from="1695667084133" duration="8188000" />
       <workItem from="1695705450064" duration="3427000" />
       <workItem from="1695744418932" duration="2485000" />
-      <workItem from="1695749781843" duration="365000" />
+      <workItem from="1695749781843" duration="491000" />
     </task>
     <task id="LOCAL-00001" summary="deleted venv">
       <option name="closed" value="true" />
@@ -297,7 +295,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695750042194</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="req update 8">
+      <option name="closed" value="true" />
+      <created>1695750151357</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1695750151357</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,7 +323,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="deleted venv" />
     <MESSAGE value="req update 6" />
-    <option name="LAST_COMMIT_MESSAGE" value="req update 6" />
+    <MESSAGE value="req update 8" />
+    <option name="LAST_COMMIT_MESSAGE" value="req update 8" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PortfolioWebsite$settings.coverage" NAME="settings Coverage Results" MODIFIED="1694459984995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OlafLewandowskiPortfolio" />
