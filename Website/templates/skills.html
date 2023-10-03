@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <title>Olaf Lewandowski</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Source+Code+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+    >
+</head>
+<body id="body" style="background: rgb(153, 224, 217)">
+
+<div id="skills-content" style="margin-bottom: 1ch;"></div>
+
+<div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" id="closebtn">x</a>
+    <a href="{% url 'Home' %}">Home</a>
+    <a href="{% url 'About' %}">About</a>
+    <a href="{% url 'Skills' %}">Skills</a>
+    <a href="{% url 'Projects' %}">Projects</a>
+    <a href="{% url 'Contact' %}">Contact</a>
+</div>
+<button id="openbtn">☰</button>
+<script src="{% static 'js/skills.js' %}" type="module" defer></script>
+<script id="skillsImgPath" type="text">{% static 'skillsImg' %}</script>
+</body>
+</html>

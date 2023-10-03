@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <title>Olaf Lewandowski</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Source+Code+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+    >
+    <script src="https://kit.fontawesome.com/4d0aff5fd5.js" crossorigin="anonymous"></script>
+</head>
+<body style="background: rgb(153, 224, 217)">
+
+
+<div class="centerDiv" id="contactDiv">
+    <h1 style="
+        font-family: 'Source Code Pro';
+        margin-bottom: 2ch;
+        text-align: center;
+    ">
+        Let's get in
+        <span style="font-family: 'Kaushan Script', cursive; color: #AC8FB3;">touch!</span>
+    </h1>
+    <div style="clear: both">
+        <form action="mailto:olaflewan@gmail.com" method="post" enctype="text/plain">
+            <div class="row">
+                <div class="col">
+                    <p style="margin-bottom: 1ch">Name:</p>
+                    <input
+                            id="contact-name"
+                            type="text"
+                            name="name"
+                            placeholder="Enter name"
+                    ><br>
+                </div>
+                <div class="col">
+                    <p style="margin-bottom: 1ch">E-mail:</p>
+                    <input
+                            id="contact-mail"
+                            type="text"
+                            name="mail"
+                            placeholder="Enter mail"
+                    ><br>
+                </div>
+            </div>
+            <div style="clear: both; padding-top: 1ch;">
+                <p style="margin-bottom: 1ch">Message:</p>
+                <textarea
+                        id="message"
+                        type="textarea"
+                        name="textarea"
+                        placeholder="Enter text"
+                ></textarea>
+                <br><br>
+                <div>
+                    <button style="float: left" type="submit" value="Send" class="submit-btn" role="button">Submit</button>
+                    <div class="contact-links" style="float: right">
+                        <a href="https://github.com/OFALOFAL/" target=”_blank” class="fa fa-github fa-contact" style="
+                            margin-left: 0.5ch;
+                            margin-right: 0.5ch;"></a>
+                        <a href="https://www.linkedin.com/in/olaf-lewandowski-b18241229/" target=”_blank” class="fa fa-linkedin fa-contact" style="
+                            margin-left: 0.5ch;
+                            margin-right: 0.5ch;"></a>
+                        <a href="https://www.facebook.com/olaf.lewandowski2" target=”_blank” class="fa fa-facebook fa-contact" style="
+                            margin-left: 0.5ch;
+                            margin-right: 0.5ch;"></a>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" id="closebtn" onclick="closeSidebar()">x</a>
+    <a href="{% url 'Home' %}">Home</a>
+    <a href="{% url 'About' %}">About</a>
+    <a href="{% url 'Skills' %}">Skills</a>
+    <a href="{% url 'Projects' %}">Projects</a>
+    <a href="{% url 'Contact' %}">Contact</a>
+</div>
+<button id="openbtn" onclick="openSidebar()">☰</button>
+<script>
+    document.getElementById("openbtn").addEventListener("mouseenter", function(  ) {
+        openSidebar();
+    });
+    function openSidebar() {
+        document.getElementById("sidebar").style.width = "150px";
+        document.getElementById("openbtn").style.padding = '0';
+    }
+
+    function closeSidebar() {
+        document.getElementById("sidebar").style.width = "0";
+        document.getElementById("openbtn").style.padding = '10px 15px';
+    }
+</script>
+</body>
+</html>
