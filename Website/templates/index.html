@@ -7,7 +7,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="{% static 'style.css' %}">
-    <link rel="shortcut icon" src="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
     <script src="{% static 'js/gl-matrix.js' %}" type="module" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,6 @@
     <h2 style="text-align: center;">IN PROGRESS...</h2>
 </div></a>
 <div id="sidebar" class="sidebar">
-    <img src="{% static 'images/favicon.ico' %}">
     <a href="javascript:void(0)" id="closebtn" onclick="closeSidebar()">x</a>
     <a href="{% url 'Home' %}">Home</a>
     <a href="{% url 'About' %}">About</a>
