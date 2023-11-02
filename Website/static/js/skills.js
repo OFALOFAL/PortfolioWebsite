@@ -54,7 +54,7 @@ let tech_stack = [
     {
         'name': 'C++',
         'iconImg': 'c++',
-        'skill': gpt_skill_levels_list[5],
+        'skill': gpt_skill_levels_list[6],
         'more': true,
         'content_more': [
             ['TEXT', 'C++ holds a special place for me as my first programming language.<br>' +
@@ -66,7 +66,7 @@ let tech_stack = [
     {
         'name': 'R',
         'iconImg': 'R',
-        'skill': gpt_skill_levels_list[3],
+        'skill': gpt_skill_levels_list[4],
         'more': true,
         'content_more': [
             ['TEXT', 'I use R for its exceptional statistical analysis capabilities, making it sometimes my choice for data exploration and visualization.'],
@@ -90,14 +90,14 @@ let tech_stack = [
     {
         'name': 'swift',
         'iconImg': 'swift',
-        'skill': gpt_skill_levels_list[0],
+        'skill': gpt_skill_levels_list[1],
         'more': false,
         'content_more': null
     },
     {
         'name': 'git',
         'iconImg': 'git',
-        'skill': gpt_skill_levels_list[1],
+        'skill': gpt_skill_levels_list[4],
         'more': false,
         'content_more': null
     },
