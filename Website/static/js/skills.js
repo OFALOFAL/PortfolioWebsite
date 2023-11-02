@@ -97,7 +97,7 @@ let tech_stack = [
     {
         'name': 'git',
         'iconImg': 'git',
-        'skill': gpt_skill_levels_list[4],
+        'skill': gpt_skill_levels_list[3],
         'more': false,
         'content_more': null
     },
