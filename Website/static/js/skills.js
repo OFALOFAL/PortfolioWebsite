@@ -35,7 +35,8 @@ let tech_stack = [
         'content_more': [
             ['TEXT', 'My go-to programming language.<br>' +
             'Its simplicity, readability, and extensive libraries have made it my trusted companion for tackling a wide array of projects.<br>' +
-            'With Python, I effortlessly bring my ideas to life, whether it\'s for artificial intelligence, simple scripts or even web development.'],
+            'With Python, I effortlessly bring my ideas to life, whether it\'s for artificial intelligence, simple scripts or even web development.<br>' +
+            'Frameworks I use and feel good about (besides tensorflow) are django and opencv'],
             ['IMG', 'Python-Masterclass'],
         ],
     },
@@ -66,12 +67,19 @@ let tech_stack = [
     {
         'name': 'R',
         'iconImg': 'R',
-        'skill': gpt_skill_levels_list[4],
+        'skill': gpt_skill_levels_list[3],
         'more': true,
         'content_more': [
             ['TEXT', 'I use R for its exceptional statistical analysis capabilities, making it sometimes my choice for data exploration and visualization.'],
             ['IMG', 'R-Bootcamp']
         ]
+    },
+    {
+        'name': 'C',
+        'iconImg': 'c',
+        'skill': gpt_skill_levels_list[3],
+        'more': false,
+        'content_more': null
     },
     {
         'name': 'mySQL',
@@ -90,20 +98,22 @@ let tech_stack = [
     {
         'name': 'swift',
         'iconImg': 'swift',
-        'skill': gpt_skill_levels_list[1],
+        'skill': gpt_skill_levels_list[2],
         'more': false,
         'content_more': null
     },
     {
         'name': 'git',
         'iconImg': 'git',
-        'skill': gpt_skill_levels_list[3],
+        'skill': gpt_skill_levels_list[4],
         'more': false,
         'content_more': null
     },
 ];
 
+
 let width = document.body['scrollWidth'];
+
 setInterval(() => {
         const new_width = document.body['scrollWidth'];
         if (new_width != width){
